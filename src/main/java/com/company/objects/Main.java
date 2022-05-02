@@ -1,11 +1,18 @@
 package com.company.objects;
 
+import com.company.Menu.AuthorMenu;
 import com.company.Menu.BookMenu;
 import com.company.Menu.StudentMenu;
+import com.company.controllers.StudentController;
 import com.company.dbhelper.DbConnection;
+import com.company.login.Auth;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.company.controllers.StudentController.addStudentScore;
+import static com.company.controllers.StudentController.deleteStudentScore;
+
 
 public class Main {
 
@@ -13,9 +20,19 @@ public class Main {
 
         //DbConnection.getConnection();
 
+      /*   if (Auth.signUp()) {
+             StudentMenu.menu();
+         } else {
+             System.out.println("Invalid login ");
+         }
+*/
+        AuthorMenu.menu();
+
         //StudentMenu.menu();
 
-        BookMenu.menu();
+
+
+        //deleteStudentScore();
 
         /*Scanner scanner = new Scanner(System.in);
 
@@ -67,3 +84,4 @@ public class Main {
     }
        // System.out.println(filterLessThanFivefive(books));
 
+//CRUD - create, read, update and delete
